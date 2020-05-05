@@ -1,0 +1,10 @@
+version: '3'
+services:
+    php:
+        image: php:7.4
+        volumes:
+            - ./blog:/src
+        working_dir: /src
+        environment:
+            APP_ENV: 'docker'
+        command: php artisan test
